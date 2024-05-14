@@ -6,6 +6,10 @@ for_each * : python -c "
 import os
 import ants
 
+# specify or create output directory
+output_dir = 'IN/6_mpm/results/mpm/ants_registration'
+os.makedirs(output_dir, exist_ok=True)
+
 # load R1, R2, PD, MT images
 r1 = ants.image_read('IN/6_mpm/results/mpm/R1.nii')
 r2s = ants.image_read('IN/6_mpm/results/mpm/R2s.nii')
@@ -33,6 +37,5 @@ ants.image_write(transformed_pd, os.path.join(output_dir,
 'PD_to_dwi.nii.gz'))
 ants.image_write(transformed_mtsat, os.path.join(output_dir, 
 'MTsat_to_dwi.nii.gz'))
-
 
 "

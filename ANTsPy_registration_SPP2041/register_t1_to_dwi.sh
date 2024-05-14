@@ -11,7 +11,7 @@ t1 = ants.image_read('IN/2_nifti/t1.nii.gz')
 b0 = ants.image_read('IN/2_nifti/b0.nii.gz')
 
 # create output directory
-output_dir = 'ants_registration'
+output_dir = 'IN/6_mpm/results/mpm/ants_registration'
 os.makedirs(output_dir, exist_ok=True)
 
 # register t1 to b0 image
